@@ -1,0 +1,205 @@
+/* ====== RESET ====== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", Arial, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #4f46e5, #3b82f6, #06b6d4);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+    color: #fff;
+}
+
+/* ====== TITLE ====== */
+h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    letter-spacing: -1px;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.25);
+}
+
+/* ====== SEARCH FIELD ====== */
+.buscador {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 30px;
+    width: 100%;
+    max-width: 450px;
+}
+
+.buscador input {
+    flex: 1;
+    padding: 14px 18px;
+    border-radius: 14px;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(8px);
+    color: #fff;
+    transition: 0.2s;
+}
+
+.buscador input::placeholder {
+    color: #e5e5e5;
+}
+
+.buscador input:focus {
+    background: rgba(255, 255, 255, 0.25);
+}
+
+.buscador button {
+    padding: 14px 28px;
+    background: #fff;
+    color: #3b82f6;
+    border: none;
+    border-radius: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+.buscador button:hover {
+    transform: scale(1.07);
+    background: #f1f1f1;
+}
+.buscador input::placeholder {
+    color: rgba(255, 255, 255, 0.65); /* transparente/branco suave */
+    font-weight: 300;
+}
+
+
+/* ====== RESULT BOX ====== */
+.resultado {
+    width: 100%;
+    max-width: 480px;
+    padding: 25px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.18);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+    animation: fadeIn 0.4s ease forwards;
+    opacity: 0;
+    margin-bottom: 20px;
+    display: none;
+}
+
+.resultado.mostrar {
+    opacity: 1;
+}
+
+.titulo {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+/* ====== INFO GRID ====== */
+.info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+}
+
+/* ====== TEMPERATURE CARD ====== */
+.temp {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.tempTitulo {
+    font-size: 1rem;
+    opacity: 0.85;
+}
+
+.tempinfo {
+    font-size: 3rem;
+    font-weight: 600;
+    text-shadow: 0 3px 6px rgba(0,0,0,0.2);
+}
+
+.temp img {
+    width: 80px;
+    margin-top: -10px;
+    filter: drop-shadow(0px 4px 6px rgba(0,0,0,0.3));
+}
+
+/* ====== WIND CARD ====== */
+.vento {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.ventoTitulo {
+    font-size: 1rem;
+    opacity: 0.85;
+}
+
+.ventoinfo {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.ventoArea {
+    width: 70px;
+    height: 70px;
+    border: 3px solid rgba(255, 255, 255, 0.4);
+    border-radius: 50%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ventoPonto {
+    width: 4px;
+    height: 28px;
+    background: #fff;
+    border-radius: 2px;
+    position: absolute;
+    top: 10px;
+    transition: transform 0.4s ease;
+}
+
+/* ====== WARNING ====== */
+.aviso {
+    margin-top: 10px;
+    font-size: 1.1rem;
+    text-align: center;
+    color: #ffeded;
+    font-weight: 500;
+    height: 22px;
+}
+
+/* ====== FOOTER ====== */
+footer {
+    margin-top: auto;
+    padding: 20px;
+    font-size: 0.9rem;
+    opacity: 0.9;
+}
+
+/* ====== ANIMATION ====== */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
